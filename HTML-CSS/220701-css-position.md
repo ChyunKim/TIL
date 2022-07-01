@@ -24,26 +24,26 @@
 
 ```css
 .container {
-	width: 300px;
+    width: 300px;
     background-color: royalblue;
 }
 
 .container .item {
-	border: 4px dashed red;
+    border: 4px dashed red;
     background-color:orange;
 }
 .container .itme:nth-child(1) {
-	width : 100px;
+    width : 100px;
     height: 100px;
 
 }
 .container .itme:nth-child(2) {
-	width : 140px;
+    width : 140px;
     height: 70px;
 
 }
 .container .itme:nth-child(3) {
-	width : 70px;
+    width : 70px;
     height: 120px;
 
 }
@@ -54,7 +54,7 @@
 
 ```css
 .container .itme:nth-child(2) {
-	width : 140px;
+    width : 140px;
     height: 70px;
     position: relative;
     top: 50px;
@@ -74,15 +74,15 @@
 **2. position: absolute;**
 ```css
 .container {
-	width: 300px;
+    width: 300px;
     background-color: royalblue;
     position: relative;
 }
 
 .container .itme:nth-child(2) {
-	width : 140px;
+    width : 140px;
     height: 70px;
-	position: absolute;
+    position: absolute;
     top: 30px;
     right: 100px;
 }
@@ -109,28 +109,28 @@ position 값이 static 이라면 position 값이 없음을 의미
 
 ```css
 .container {
-	position : relative;
-	width: 300px;
+    position : relative;
+    width: 300px;
     background-color: royalblue;
 }
 
 .container .itme:nth-child(1) {
-	position : static;
+    position : static;
     z-index: 3;
-	width : 100px;
+    width : 100px;
     height: 100px;
 
 }
 .container .itme:nth-child(2) {
-	position : absolute;
-	z-index : 2;
+    position : absolute;
+    z-index : 2;
     width : 140px;
     height: 70px;
 v
 .container .itme:nth-child(3) {
-	position : absolute;
+    position : absolute;
     z-index : 1;
-	width : 70px;
+    width : 70px;
     height: 120px;
 
 }
