@@ -1,0 +1,160 @@
+body {
+  max-width:431px;
+  max-height: 721px;
+  background-color: #feffff;
+  font-size: 12px;
+}
+
+#header-container {
+  width: 100%;
+  height: 7vh;
+}
+.logo-wrapper {
+  position : fixed;
+  top : 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-item {
+  height: 1.4em;
+  padding: 12px 25px;
+}
+
+.logo-item:nth-child(2) {
+  height: 2.4em;
+  padding: 6px 20px;
+
+}
+
+.story-wrapper {
+  width: 100%;
+  height: 11vh;
+  border: solid 0.1px #e5e5e5;
+  background-color: #f5f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-item {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+
+
+.story-img {
+  width: 2.2em;
+  height: 2.2em;
+  border: 2.5px solid #e5e5e5;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+
+.story-text {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color:#343434;
+}
+
+#section-container {
+  height: 60vh;
+}
+
+.user-wrapper {
+  width: 100%;
+  height: 9%;
+  margin: 6px 0;
+}
+
+.user-img {
+  width: 1.8em;
+  height: 1.8em;
+  border: 1px solid #d7d5d5;
+  border-radius: 50%;
+  float: left;
+  margin: 5px 5px 5px 13px;
+}
+.user-name {
+  display: inline-block;
+  font-size: 13.5px;
+  font-weight: bold;
+  margin: 13px 7px;
+}
+
+.user-more {
+  height: 0.25em;
+  float: right;
+  padding: 18px 15px 18px;
+}
+
+.main-wrapper {
+  width: 100vw;
+  height: 50vh;
+}
+
+.main-img {
+  width: 100%;
+}
+
+.icon-box {
+  width: 100%;
+}
+
+.icon-item {
+  height: 1.3em;
+  padding: 5px;
+  margin: auto;
+  margin-top: 5px;
+}
+.icon-item:nth-child(1) {
+  margin-left: 5px;
+}
+
+.icon-item:nth-child(4) {
+  float: right;
+  margin-right: 10px;
+}
+
+.comment-wrapper {
+  display: flex;
+}
+.comment-img {
+  height: 1em;
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-top: 3px;
+}
+
+.comment-text {
+  font-size: 9px;
+  margin-top: 5px;
+  margin-left: 3px;
+  font-weight: bold;
+}
+
+#footer-container {
+  position : fixed;
+  bottom : 0;
+  width: 100%;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 0.1px #e5e5e5;
+  background-color: #f5f6f6;
+
+}
+
+.footer-item {
+  height: 1.4em;
+  padding: 13px;
+
+}
