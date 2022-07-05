@@ -9,4 +9,5 @@
 - [220701-css-flex](https://github.com/ChyunKim/TIL/blob/main/HTML-CSS/220701-css-flex.md) 
 - [220701-css-kakao-clone](https://github.com/ChyunKim/TIL/tree/main/HTML-CSS/220701-css-kakao-clone)
 - [220704-css-insta-clone](https://github.com/ChyunKim/TIL/tree/main/HTML-CSS/220704-css-insta-clone)
-
+- [220704-js-1](https://github.com/ChyunKim/TIL/blob/main/javascript/220704-javascript-1.md)
+- [220704-js-2](https://github.com/ChyunKim/TIL/blob/main/javascript/220704-javascript-2.md)
