@@ -18,3 +18,4 @@
 - [220711-js-constructor](https://github.com/ChyunKim/TIL/blob/main/javascript/220711-js-constructor.md)
 - [220714-js-class](https://github.com/ChyunKim/TIL/blob/main/javascript/220714-js-class.md)
 - [220714-js-starEX](https://github.com/ChyunKim/TIL/blob/main/javascript/220714-js-starEX.md)
+- [220715-js-high-function](https://github.com/ChyunKim/TIL/blob/main/javascript/220715-js-high-function.md)
