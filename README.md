@@ -16,3 +16,5 @@
 - [220708-git-branch](https://github.com/ChyunKim/TIL/blob/main/git/220708-gitbranch.md)
 - [220711-git-project](https://github.com/ChyunKim/TIL/blob/main/git/220711-gitproject.md)
 - [220711-js-4](https://github.com/ChyunKim/TIL/blob/main/javascript/220711-javascript-4.md)
+- [220714-js-5](https://github.com/ChyunKim/TIL/blob/main/javascript/220714-javascript-5.md)
+- [220714-js-6](https://github.com/ChyunKim/TIL/blob/main/javascript/220714-javascript-6.md)
