@@ -21,4 +21,4 @@
 - [220715-js-high-function](https://github.com/ChyunKim/TIL/blob/main/javascript/220715-js-high-function.md)
 - [220715-js-super](https://github.com/ChyunKim/TIL/blob/main/javascript/220715-js-super.md)
 - [220716-js-object](https://github.com/ChyunKim/TIL/blob/main/javascript/220716-js-object.md)
-- [corejavascript-Ch1](https://github.com/ChyunKim/TIL/tree/main/corejs)
+- [corejavascript-Ch1](https://github.com/ChyunKim/TIL/blob/main/corejs/Ch1.md)
