@@ -22,3 +22,4 @@
 - [220715-js-super](https://github.com/ChyunKim/TIL/blob/main/javascript/220715-js-super.md)
 - [220716-js-object](https://github.com/ChyunKim/TIL/blob/main/javascript/220716-js-object.md)
 - [corejavascript-Ch1](https://github.com/ChyunKim/TIL/blob/main/corejs/Ch1.md)
+- [220718-js-destructuring](https://github.com/ChyunKim/TIL/blob/main/javascript/220718-js-destructuring.md)
