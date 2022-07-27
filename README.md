@@ -29,4 +29,5 @@
 - [220725-react](https://github.com/ChyunKim/TIL/blob/main/react/220725-react.md)
 - [220725-js-timer](https://github.com/ChyunKim/TIL/blob/main/javascript/220725-js-timer.md)
 - [220725-react-environment](https://github.com/ChyunKim/TIL/blob/main/react/220725-react-environment.md)
+- [220728-js-summary-1](https://github.com/ChyunKim/TIL/blob/main/javascript/220728-js-summary-1.md)
 
