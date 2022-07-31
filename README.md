@@ -1,33 +1,10 @@
 # TIL(Today I Learned..)
 📚 배운 내용에 대해서 간략하게 정리해 나가보도록 하겠습니다!
+<br>
+<br>
 
-## Jun.
-- [git 사용법 학습](https://github.com/ChyunKim/TIL/blob/main/git/220629-gitcommands.md)
-
-## Jul.
-- [220701-css-position](https://github.com/ChyunKim/TIL/blob/main/HTML-CSS/220701-css-position.md)
-- [220701-css-flex](https://github.com/ChyunKim/TIL/blob/main/HTML-CSS/220701-css-flex.md) 
-- [220701-css-kakao-clone](https://github.com/ChyunKim/TIL/tree/main/HTML-CSS/220701-css-kakao-clone)
-- [220704-css-insta-clone](https://github.com/ChyunKim/TIL/tree/main/HTML-CSS/220704-css-insta-clone)
-- [220704-js-Build-Environment](https://github.com/ChyunKim/TIL/blob/main/javascript/220704-js-Build-Environment.md)
-- [220704-js-scope](https://github.com/ChyunKim/TIL/blob/main/javascript/220704-js-scope.md)
-- [220705-css-overwatch](https://github.com/ChyunKim/TIL/tree/main/HTML-CSS/220705-css-overwatch)
-- [220707-js-arrow-function](https://github.com/ChyunKim/TIL/blob/main/javascript/220707-js-arrow-function.md)
-- [220708-git-branch](https://github.com/ChyunKim/TIL/blob/main/git/220708-gitbranch.md)
-- [220711-git-project](https://github.com/ChyunKim/TIL/blob/main/git/220711-gitproject.md)
-- [220711-js-constructor](https://github.com/ChyunKim/TIL/blob/main/javascript/220711-js-constructor.md)
-- [220714-js-class](https://github.com/ChyunKim/TIL/blob/main/javascript/220714-js-class.md)
-- [220714-js-starEX](https://github.com/ChyunKim/TIL/blob/main/javascript/220714-js-starEX.md)
-- [220715-js-high-function](https://github.com/ChyunKim/TIL/blob/main/javascript/220715-js-high-function.md)
-- [220715-js-super](https://github.com/ChyunKim/TIL/blob/main/javascript/220715-js-super.md)
-- [220716-js-object](https://github.com/ChyunKim/TIL/blob/main/javascript/220716-js-object.md)
-- [corejavascript-Ch1](https://github.com/ChyunKim/TIL/blob/main/corejs/Ch1.md)
-- [220718-js-destructuring](https://github.com/ChyunKim/TIL/blob/main/javascript/220718-js-destructuring.md)
-- [220719-js-imolicit-objects](https://github.com/ChyunKim/TIL/blob/main/javascript/220719-js-implicit-objects.md)
-- [220721-js-dom](https://github.com/ChyunKim/TIL/blob/main/javascript/220721-js-dom.md)
-- [220723-js-hoisting](https://github.com/ChyunKim/TIL/blob/main/javascript/220723-js-hoisting.md)
-- [220725-react](https://github.com/ChyunKim/TIL/blob/main/react/220725-react.md)
-- [220725-js-timer](https://github.com/ChyunKim/TIL/blob/main/javascript/220725-js-timer.md)
-- [220725-react-environment](https://github.com/ChyunKim/TIL/blob/main/react/220725-react-environment.md)
-- [220728-js-summary-1](https://github.com/ChyunKim/TIL/blob/main/javascript/220728-js-summary-1.md)
-
+## 📖 학습내용 <br>
+- HTML
+- CSS
+- Javascript
+- React
