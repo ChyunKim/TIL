@@ -94,7 +94,7 @@ useReducer의 첫번째 파라미터에는 리듀서 함수를 넣고 두번쨰 
 이 Hook을 사용하면 state 값과 dispatch 함수를 받아옴 <br>
 여기서 state는 현재 가리키고 있는 상태고 dispatch 는 액션을 발생시키는 함수<br><br>
 
-# useMemo <br>
+## useMemo <br>
 useMemo를 사용하면 함수 컴포넌트 내부에서 발생하는 연상을 최적화<br>
 
 ```javascript
