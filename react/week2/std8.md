@@ -22,8 +22,8 @@ useState는 앞에서도 공부했지만 Hook에 포함된 기능이므로 다�
 useState 함수의 파라미터에는 상태의 기본값을 넣어줌 => 위의 코드에서는 0을 넣어줬지만, 원하는 기본값을 넣어주면 됨<br><br>
 
 ## useEffect <br>
-useEffect 리액트 컴포넌트가 렌더링될 때마다 특정 작업을 수행하도록 설정할 수 있는 Hook<br>
-클래스형 컴포넌트의 componentDidMount, componentDidUpdate를 합친형태로 보아도 무방 <br>
+useEffect 리액트 컴포넌트가 렌더링될 때마다 특정 작업을 수행하도록 설정할 수 있는 Hook <br>
+side-effect 다룰 때 사용하는 Hook <br>
 
 ```javascript
 const info = () => {
@@ -40,26 +40,88 @@ const info = () => {
 }
 
 ```
-위와 같이 작성시 브라우저 개발자 도구시 렌더링 될때마다 해당 문구가 콘솔창에 나옴<br>
-만약 처음 렌더링 될떄만 실행하고 업데이트 될때는 실행하지 않으려면 함수의 두번째 파라미터로 비어있는 배열 넣어주면 됨<br>
+위와 같이 작성시 렌더될때 마다 콜백함수 실행 <br><br>
 
+만약 처음 렌더링 될떄만 실행하고 업데이트 될때는 실행하지 않으려면 함수의 두번째 파라미터로 비어있는 배열 넣어주면 됨<br>
 ```javascript
 useEffect (()=> {
     console.log("마운트 될때만 실행")
 },[]);
 ```
-위와 같이 작성시 컴포넌트가 처음 나타날 때만 콘솔에 문구가 나타나고 그 이후 업데이트 렌더링될때는 나타나지 않음<br>
+위와 같이 작성시, 최초 렌더 이후 1회만 실행<br>
+컴포넌트가 처음 나타날 때만 콘솔에 문구가 나타나고 그 이후 업데이트 렌더링될때는 나타나지 않음<br><br>
 
 특정값이 업데이트 될때만 나타내고 싶을때는 두번째 파라미터에 특정값을 넣어주면 됨 <br>
-
 ```javascript
 useEffect (()=> {
     console.log("이름이 바뀔때만 실행")
 },[name]);
 ```
+위와 같이 두번쨰 인자로 dependency array 값 설정시 dependency array 값이 바뀌면 callback 함수 재실행<br>
+즉, 두번째 파라미터 배열에 무엇을 넣는지에 따라 실행되는 조건이 달라짐<br><br>
 
-위와 같이 작성시 이름이 바뀔 떄만 콘솔창에 문구가 출력됨을 알 수 있음<br>
-즉, 두번째 파라미터 배열에 무엇을 넣는지에 따라 실행되는 조건이 달라짐<br>
+### **side effect** <br>
+React 컴포넌트가 화면에 렌더링된 이후에 비동기적으로 처리되어야 하는 부수적인 효과들을 side effect 라고 함<br>
+
+```javascript
+const App = () => {
+    const [value, setValue] = React.useState('1')
+
+    document.addEventListener('click', () => {
+        alert(1)
+    })
+
+    return (
+        <input type="number" value ={value} onChange = {(e) => {setValue(e.target.value)}} />
+    )
+}
+```
+위처럼 코드가 작성되었다면 App 컴포넌트가 리렌더링 될때마다 document에 대해 click event listener 가 중복적으로 생성되므로 useEffect 사용<br><br>
+
+하지만 아래와 같이 작성한다 해도 위의 useEffect 사용하지 않았을때와 같이 click event listener 가 중복 등록됨<br>
+```javascript
+const app = () => {
+    const [value, setValue] = React.useState('1');
+    useEffect (()=> {
+        document.addEventListener('click', ()=> {
+            alert(value);
+        })
+    },[value])
+    
+    return (
+        <input type ="number" value ={value} onChange = {(e)=>{setValue(e.target.value)}} />
+    )
+}
+```
+중복등록되는 것을 방지하기 위해 cleanup 함수를 리턴해줌<br>
+
+```javascript
+const app = () => {
+    
+    const [value, setValue] = React.useState('1');
+    useEffect(()=> {
+        const handleClick = () => {
+        alert(value);
+    }
+        document.addEventListener('click',handleClick);
+        return () => {
+        document.removEventListener('click', handleClick)
+        }
+    },[value])
+    
+    return (
+        <input type ="number" value ={value} onChange = {(e)=>{setValue(e.target.value)}} />
+    )
+}
+```
+
+**cleanup 진행**<br>
+1. value 가 1인 상태로 컴포넌트가 최초 렌더
+2. alert(1) 이벤트 리스너가 등록
+3. 그 이후 value가 바뀌면 기존 value 1 기준은로 cleanup 함수 (removEventListener) 실행
+4. alert(value) 로 이벤트 리스너 재등록 
+
+<br><br>
 
 ## useReducer <br>
 useReducer 는 useState보다 더 다양한 컴포넌트 상황에 따라 다양한 상태를 다른 값으로 업데이트 해주고 싶을 때 사용하는 Hook<br>
@@ -96,15 +158,51 @@ useReducer의 첫번째 파라미터에는 리듀서 함수를 넣고 두번쨰 
 
 ## useMemo <br>
 useMemo를 사용하면 함수 컴포넌트 내부에서 발생하는 연상을 최적화<br>
+성능 최적화를 위하여 연산된 값을 useMemo 라는 Hook을 사용하여 재사용<br>
 
 ```javascript
-const getAvg = num => {
-    console.log('평균값 계산')
-    if(num.length === 0) return 0
-    const sum = num.reduce((a,b) => a+b)
-    return sum / num.length;
+const App = ({max = 100000000} = {}) => {
+
+    const [value, setValue] = React.useState('')
+    
+    let sum = 0;
+    for(let i = 0; i <= max; i++) {
+        sum += i;
+    }
+    // 1부터 1억까지의 loop는 굉장히 오래 걸림 => state 가 변경되면 함수 다시 실행
+    return (
+        <>
+        {sum}
+        <input value = {value} onChange={(e)=>{setValue(e.target.value)}}/>
+        </>
+    )
 }
 ```
+위와 같이 오래 걸리는 연산을 최적화 하기 위해 useMemo 사용 <br>
+
+```javascript
+const App = ({max = 10000} = {}) => {
+
+    const [value, setValue] = React.useState('')
+    
+    const sum = React.useMemo(() => {
+        let tmp = 0;
+        for(let i = 0; i <= max; i++) {
+            tmp += i;
+        }
+        return tmp;
+    },[max])
+
+    return (
+        <>
+        {sum}
+        <input value = {value} onChange={(e)=>{setValue(e.target.value)}}/>
+        </>
+    )
+}
+```
+
+
 
 
 
