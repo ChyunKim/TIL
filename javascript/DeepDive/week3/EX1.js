@@ -1,5 +1,5 @@
 // 입력된 값이 해당 값이랑 같은지 확인하는 함수
-function sameStr2(s,c) {
+function solution(s,c) {
     let result = 0;
     for(let i = 0; i < s.length; i++) {
         if(s[i] === c) result++ 
@@ -8,14 +8,14 @@ function sameStr2(s,c) {
 }
 
 // 입력된 값이 해당 값이랑 같은지 확인하는 함수2 - split 활용 => 찾는 문자가 해당 문자열에 있는 경우 해당 문자를 기준으로 나눔 => 배열 길이가 찾고자 하는 문자 + 1
-function sameStr(s,c) {
+function solution(s,c) {
     let result = 0;
     result = s.split(c);
     return result.length-1;
 }
 
 // 주어진 문자가 대문자인지 확인하는 함수
-function soultionUpper(s) {
+function solution(s) {
     let result = 0;
     for(let i = 0; i < s.length; i++){
         if(s[i].charCodeAt() > 64 ) result++
@@ -24,7 +24,7 @@ function soultionUpper(s) {
 }
 
 // 주어진 문자가 대문자인지 확인하는 함수2
-function soultionUpper2(s) {
+function solution(s) {
     let result = 0;
     for(let x of s) {
         let num = x.charCodeAt()
@@ -34,7 +34,7 @@ function soultionUpper2(s) {
 }
 
 // 주어진 문자가 대문자인지 확인하는 함수3
-function soultionUpper3(s) {
+function solution(s) {
     let result = 0;
     for(let x of s) {
         if(x === x.toUpperCase()) result++
@@ -43,7 +43,7 @@ function soultionUpper3(s) {
 }
 
 // 대소문자 변환
-function upperFunc(s) {
+function solution(s) {
     let result = '';
     for(let x of s) {
         if(x ===x.toUpperCase()) result  += x.toLowerCase();
@@ -53,7 +53,7 @@ function upperFunc(s) {
 }
 
 // 가징 긴 문자열 찾아 반환 하는 함수
-function longStr(s) {
+function solution(s) {
     let result = '';
 
     //Number.MIN_SAFE_INTEGER => JavaScript에서 안전한 최소 정수값
@@ -67,7 +67,7 @@ function longStr(s) {
 
 // 입력된 알파벳 숫자가 몇개인지 출력하는 함수
 // 예, "KKHSSSSSE" => "K2H1S5E1" => "K2HS5E" => 1은 생략 
-function numAlp() {
+function solution() {
     let result = ''
     let cnt = 1;
     s  = s+''
@@ -84,7 +84,7 @@ function numAlp() {
 
 // 앞으로 읽거나 뒤로 읽어도 같은 문자! 회문문자는 YES 출력하는 함수
 // 대소문자 구문하지 않음
-function roundRobin1(s) {
+function solution(s) {
     let result = "YES"
     let left = 0;
     let right = s.length-1;
@@ -103,7 +103,7 @@ function roundRobin1(s) {
 
 // 앞으로 읽거나 뒤로 읽어도 같은 문자! 회문문자는 YES 출력하는 함수2
 // split 사용
-function roundRobin2(s) {
+function solution(s) {
     let result = "YES"
     let str = s.toLowerCase();
     if(str.split('').reverse().join('')!== s) return "NO"
@@ -112,7 +112,7 @@ function roundRobin2(s) {
 
 // 문자열 하나를 삭제하면 회문 문자가 되는지 확인하는 함수
 // 회문문자가 아니여도 문자 하나만 삭제해도 회문이 되는지 확인
-function ciecleRobin1(s) {
+function solution(s) {
     let result = "YES"
     let left = 0;
     let right = s.length-1;
@@ -141,7 +141,7 @@ function ciecleRobin1(s) {
 
 // 문자열 하나를 삭제하면 회문 문자가 되는지 확인하는 함수2
 // 회문문자가 아니여도 문자 하나만 삭제해도 회문이 되는지 확인
-function ciecleRobin2(s) {
+function solution(s) {
     let result = "YES"
     let str = s.toLowerCase();
     while(left < right) {
@@ -158,7 +158,31 @@ function ciecleRobin2(s) {
     return result;
 }
 
+// 문자열로 입력되면 숫자로 바꿔주는 함수
+// 앞자리가 zero이면 생략
+function solution(s) {
+    let result = 0;
+    let nums = ["zero","one","two", "three", "four", "five","six","seven", "eight","nine"]
+    for(let i = 0; i < 10; i++) {
+        s = s.replaceAll(nums[i], i)
+    }
+    result = parseInt(s);
 
+    return result;
+}
 
+// 문자열로 입력되면 숫자로 바꿔주는 함수2
+// 앞자리가 zero이면 생략
+function solution(s) {
+    let result = 0;
+    let nums = ["zero","one","two", "three", "four", "five","six","seven", "eight","nine"]
+    for(let i = 0; i < 10; i++) {
+        let tmp = s.split(nums[i])
+        s = tmp.join(i)
+    }
+    result = parseInt(s);
+
+    return result;
+}
 
 
