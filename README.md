@@ -8,3 +8,4 @@
 - CSS
 - Javascript
 - React
+- Typescript
