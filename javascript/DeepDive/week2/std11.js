@@ -44,5 +44,3 @@ const circle2 = new Circle(2);
 // Circle 생성자 함수가 생성하는 모든 인스턴스는 하나의 getArea 메소드 공유함
 console.log(circle1.getArea === circle2.getArea);       // true
 
-
-
