@@ -8,7 +8,7 @@ function hello(b : number ) {
     console.log(`Hello ${b}`)
 }
 hello(12);          
-//hello('kim');  String 형태 불가능
+// hello('kim');  String 형태 불가능
 
 
 // boolean type
@@ -56,7 +56,7 @@ let arr : (number|string)[] = [1,2,3,"lee"];
 let list2 : Array<number> = [1,2,3];  // js, jsx 파일과 충동날 수 있으므로 사용 자제
 
 
-//Tuple
+// Tuple
 let x : [string, number];
 x = ['hello', 20];
 
